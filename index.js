@@ -9,9 +9,34 @@
 // truncate('hexlet', 2); // 'he...'
 
 // Решение
-const truncate = (text, length) => {
-  return`${text.slice(0,length)}...`;
-};
-let example = 'Hello, everybody!';
-console.log(truncate(example,5)); // проверка функции - результат - Hello...
+// const truncate = (text, length) => {
+//   return`${text.slice(0,length)}...`;
+// };
+// let example = 'Hello, everybody!';
+// console.log(truncate(example,5)); // проверка функции - результат - Hello...
 
+// const getHiddenCard = (cardNumber, starsCount = 4) => {
+//   const visibleDigitsLine = cardNumber.slice(12);
+//   return `${'*'.repeat(starsCount)}${visibleDigitsLine}`;
+// };
+// const number12 = 12012345;
+// console.log(getHiddenCard(number12, 5));
+
+// Задание 50
+
+// Реализуйте функцию getHiddenCard(), которая принимает на вход номер кредитки (состоящий из 16 цифр) в виде строки 
+// и возвращает его скрытую версию, которая может использоваться на сайте для отображения. Если исходная карта имела номер 2034399002125581, то скрытая версия выглядит так ****5581. Другими словами, функция заменяет первые 12 символов, на звездочки. Количество звездочек регулируется вторым необязательным параметром. Значение по умолчанию — 4.
+
+// Кредитка передается внутрь как строка
+// getHiddenCard('1234567812345678', 2); // "**5678"
+// getHiddenCard('2034399002121100', 1); // "*1100"
+// Для выполнения задания вам понадобится метод строки repeat(), который повторяет строку указанное количество раз
+
+// '+'.repeat(5); // "+++++"
+// 'o'.repeat(3); // "ooo"
+
+const getHiddenCard = (numberCard, asteriksCount = 4) => {
+  return`${'*'.repeat(asteriksCount)}${numberCard.slice(-4)}`;
+};
+getHiddenCard('1234567812345678', 2);
+console.log(getHiddenCard('1234567812345678'));
