@@ -57,6 +57,17 @@ console.log(capitalize(name)); // => "Arya"
 Решение*/
 // Решение учителя
 //const capitalize = (text) => `${text[0].toUpperCase()}${text.slice(1)}`;
-const capitalize = (text) => `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
+/* const capitalize = (text) => `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
 let nameFirst = 'dayeneris';
-console.log(capitalize(nameFirst));//Dayeneris
+console.log(capitalize(nameFirst));//Dayeneris */
+
+/* Задание 52
+
+Напишите функцию isPensioner(), которая принимает один параметр — возраст человека, и проверяет, является ли он пенсионным. Пенсионером считается человек, достигший возраста 60 лет и больше.
+Примеры вызова:
+isPensioner(75); // true
+isPensioner(18); // false
+
+Решение*/
+const isPensioner = (age) => age >= 60; 
+console.log(isPensioner(44));// false
