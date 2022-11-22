@@ -69,5 +69,17 @@ isPensioner(75); // true
 isPensioner(18); // false
 
 Решение*/
-const isPensioner = (age) => age >= 60; 
-console.log(isPensioner(44));// false
+/* const isPensioner = (age) => age >= 60; 
+console.log(isPensioner(44));// false */
+
+/* Задание 53
+
+Задание
+Напишите функцию isMister(), которая принимает строку и проверяет, является ли она словом 'Mister'.
+Примеры вызова:
+isMister('Mister'); // true
+isMister('Miss');   // false
+
+Решение*/
+const isMister = (text) => (text === 'Mister');
+console.log(isMister('Lady')); // false
