@@ -81,5 +81,17 @@ isMister('Mister'); // true
 isMister('Miss');   // false
 
 Решение*/
-const isMister = (text) => (text === 'Mister');
-console.log(isMister('Lady')); // false
+// const isMister = (text) => (text === 'Mister');
+// console.log(isMister('Lady')); // false
+
+/* Задание 54
+
+Задание
+Задание
+Реализуйте функцию, которая проверяет формат указанного телефона. Если телефон начинается с +, значит это международный формат.
+isInternationalPhone('89602223423'); // false
+isInternationalPhone('+79602223423'); // true
+
+Решение*/
+const isInternationalPhone = (phone) => (phone[0] === '+');
+console.log(isInternationalPhone('79602223423')); // false
