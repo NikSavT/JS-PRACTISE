@@ -86,12 +86,24 @@ isMister('Miss');   // false
 
 /* Задание 54
 
-Задание
-Задание
 Реализуйте функцию, которая проверяет формат указанного телефона. Если телефон начинается с +, значит это международный формат.
 isInternationalPhone('89602223423'); // false
 isInternationalPhone('+79602223423'); // true
 
 Решение*/
-const isInternationalPhone = (phone) => (phone[0] === '+');
-console.log(isInternationalPhone('79602223423')); // false
+// const isInternationalPhone = (phone) => (phone[0] === '+');
+// console.log(isInternationalPhone('79602223423')); // false
+
+/* Задание 55
+
+Реализуйте функцию isLeapYear(), которая определяет, является ли год високосным или нет. Год будет високосным, если он кратен (то есть делится без остатка) 400 или он одновременно кратен 4 и не кратен 100. Как видите, в определении уже заложена вся необходимая логика, осталось только переложить её на код:
+isLeapYear(2018); // false
+isLeapYear(2017); // false
+isLeapYear(2016); // true
+
+Решение*/
+
+const isLeapYear = (year) => (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0));
+console.log(isLeapYear(2018)); // false
+console.log(isLeapYear(2017)); // false
+console.log(isLeapYear(2016)); // true
