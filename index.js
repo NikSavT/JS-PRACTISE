@@ -103,7 +103,61 @@ isLeapYear(2016); // true
 
 Решение*/
 
-const isLeapYear = (year) => (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0));
-console.log(isLeapYear(2018)); // false
-console.log(isLeapYear(2017)); // false
-console.log(isLeapYear(2016)); // true
+// const isLeapYear = (year) => (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0));
+// console.log(isLeapYear(2018)); // false
+// console.log(isLeapYear(2017)); // false
+// console.log(isLeapYear(2016)); // true
+
+/* Задание 56 ВСЕ ЗАКОММЕНТИРОВАНО!!!!
+
+В этом уроке вам нужно будет реализовать две функции isPalindrome() и isNotPalindrome()
+Функция isPalindrome() определяет, является ли слово палиндромом или нет. Палиндром это слово, которое читается одинаково в обоих направлениях.
+isPalindrome('шалаш'); // true
+isPalindrome('ага'); // true
+isPalindrome('хекслет'); // false
+
+// Слова в функцию могут быть переданы в любом регистре
+// Поэтому сначала нужно привести слово в нижний регистр word.toLowerCase()
+isPalindrome('Ага'); // true
+Для определения палиндрома необходимо перевернуть строку и сравнить ее с исходной. Для этого воспользуйтесь функцией reverse()
+
+reverse('мама'); // 'амам'
+Функция isNotPalindrome() проверяет что слово НЕ является палиндромом:
+isNotPalindrome('шалаш'); // false
+isNotPalindrome('ага'); // false
+isNotPalindrome('хекслет'); // true
+Для этого, вызовите функцию isPalindrome() внутри isNotPalindrome() и примените отрицание.
+
+Решение*/ //написана функция создателями курса В РЕДАКТОРЕ КОДА  И БРАУЗЕРЕ НЕ БУДЕТ РАБОТАТЬ!!!!!!
+
+/* Решение учителя:
+// Функция reverse() написана нами специально для наших упражнений
+// В ней используются механики, которые еще не изучались
+const reverse = (s) => s.split('').reverse().join('');
+
+// BEGIN
+const isPalindrome = (word) => {
+  const lowerWord = word.toLowerCase();
+  return lowerWord === reverse(lowerWord);
+};
+
+const isNotPalindrome = (word) => !isPalindrome(word);
+// END
+
+export default isNotPalindrome;
+Ваше решение:
+// Функция reverse() написана нами специально для наших упражнений
+// В ней используются механики, которые еще не изучались
+const reverse = (s) => s.split('').reverse().join('');
+
+// BEGIN (write your solution here)
+const isPalindrome = (string) => {
+  const stringLower = string.toLowerCase();
+  return stringLower === reverse(stringLower);
+};
+
+const isNotPalindrome = (word) => (!isPalindrome(word)); 
+//const isNotPalindrome = (word) => (!isPalindrome);
+// END
+
+export default isNotPalindrome; */
