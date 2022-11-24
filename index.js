@@ -175,5 +175,22 @@ getLetter(name, 1); // 'H'
 
 Решение*/
 
-const getLetter = (text, number) => (text[number - 1] || '');
-console.log(getLetter('maintainability',15));//y
+// const getLetter = (text, number) => (text[number - 1] || '');
+// console.log(getLetter('maintainability',15)); //y
+
+/* Задание 58
+
+Реализуйте функцию guessNumber(), которая принимает число и проверяет, равно ли число заданному (пусть это будет 42). Если равно, то функция должна вернуть строку 'You win!', в противном случае нужно вернуть строку 'Try again!'.
+
+guessNumber(42) // 'You win!'
+guessNumber(61) // 'Try again!'
+
+Решение*/
+
+const guessNumber = (number) => {
+  if(number === 42){
+    return 'You win!';
+  }
+  return 'Try again!';
+};
+console.log(guessNumber(37));//Try again!
