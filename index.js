@@ -187,10 +187,34 @@ guessNumber(61) // 'Try again!'
 
 Решение*/
 
-const guessNumber = (number) => {
-  if(number === 42){
-    return 'You win!';
+// const guessNumber = (number) => {
+//   if(number === 42){
+//     return 'You win!';
+//   }
+//   return 'Try again!';
+// };
+// console.log(guessNumber(37));//Try again!
+
+/* Задание 59
+
+Реализуйте функцию normalizeUrl(), которая выполняет так называемую нормализацию данных. Она принимает адрес сайта и возвращает его с https:// в начале.
+Функция принимает адреса в виде АДРЕС или https://АДРЕС, но всегда возвращает адрес в виде https://АДРЕС
+Можно использовать метод startsWith(), чтобы проверить, начинается ли строка с префикса https://. А потом на основе этого добавлять или не добавлять https://.
+Примеры вызова:
+normalizeUrl("google.com"); // "https://google.com"
+normalizeUrl("https://ai.fi"); // "https://ai.fi"
+
+Решение*/
+
+const normalizeUrl = (site) => {
+  let normalizedUrl;
+
+  if (site.startsWith('https://')) {
+    normalizedUrl = site;
+  } else {
+    normalizedUrl = `https://${site}`;
   }
-  return 'Try again!';
+
+  return normalizedUrl;
 };
-console.log(guessNumber(37));//Try again!
+console.log(normalizeUrl('code-basics.com/ru'));//https://code-basics.com/ru
