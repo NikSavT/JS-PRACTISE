@@ -185,12 +185,32 @@ printNumbers(4);
 finished!
 
 Решение*/
-const printNumbers = (initialNumber) => {
-  let i = initialNumber;
-  while (i >= 1) {
-    console.log(i);
-    i = i - 1;
+// const printNumbers = (initialNumber) => {
+//   let i = initialNumber;
+//   while (i >= 1) {
+//     console.log(i);
+//     i = i - 1;
+//   }
+//   console.log('finished!'); 
+// };
+// printNumbers(4);// 4  3  2  1  finished!
+
+/* Задание 64
+Реализуйте функцию multiplyNumbersFromRange(), которая перемножает числа в указанном диапазоне включая границы диапазона. Пример вызова:
+
+multiplyNumbersFromRange(1, 5); // 1 * 2 * 3 * 4 * 5 = 120
+multiplyNumbersFromRange(2, 3); // 2 * 3 = 6
+multiplyNumbersFromRange(6, 6); // 6
+
+Решение*/
+
+const multiplyNumbersFromRange = (start, end) => {
+  let i = start;
+  let multiplication = 1;
+  while (i <= end) {
+    multiplication = multiplication * i;
+    i = i + 1;
   }
-  console.log('finished!'); 
+  return multiplication;
 };
-printNumbers(4);// 4  3  2  1  finished!
+console.log(multiplyNumbersFromRange(2, 12));// 479001600
