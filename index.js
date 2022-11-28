@@ -137,7 +137,7 @@ getNumberExplanation(7);   // 'prime number'
 }; */
 
 //Решение 2: через return
-const getNumberExplanation = (number) => {
+/* const getNumberExplanation = (number) => {
   switch (number) {
     case 666:
       return 'devil number';
@@ -153,4 +153,44 @@ const getNumberExplanation = (number) => {
   }
 };
 
-console.log(getNumberExplanation(666)); //devil number
+console.log(getNumberExplanation(666)); //devil number */
+
+/* Задание 63
+
+функция 
+const printNumbers = (lastNumber) => {
+  // i сокращение от index (порядковый номер)
+  // используется по общему соглашению во множестве языков
+  // как счетчик цикла
+  let i = 1;
+
+  while (i <= lastNumber) {
+    console.log(i);
+    i = i + 1;
+  }
+  console.log('finished!');
+};
+
+printNumbers(3);
+
+Модифицируйте функцию printNumbers() так, чтобы она выводила числа в обратном порядке. 
+Для этого нужно идти от верхней границы к нижней. То есть счётчик должен быть инициализирован максимальным значением,
+ а в теле цикла его нужно уменьшать до нижней границы.
+
+printNumbers(4);
+4
+3
+2
+1
+finished!
+
+Решение*/
+const printNumbers = (initialNumber) => {
+  let i = initialNumber;
+  while (i >= 1) {
+    console.log(i);
+    i = i - 1;
+  }
+  console.log('finished!'); 
+};
+printNumbers(4);// 4  3  2  1  finished!
