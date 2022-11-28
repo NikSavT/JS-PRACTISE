@@ -78,7 +78,7 @@ const convertText = (text) => {
 }; */
 
 
-const reverse = (str) => str.split('').reverse().join('');// функция дана из условия
+//const reverse = (str) => str.split('').reverse().join('');// функция дана из условия
 /* const convertText = (text) => {
   if (text === '') {
   return '';
@@ -92,7 +92,7 @@ const reverse = (str) => str.split('').reverse().join('');// функция да
 // const convertText = (text) => (text === '' ? '' : (text[0] === text[0].toUpperCase() ? text : reverse(text)));
 
 // Решение через один тернальный оператор:
-const convertText = (text) => {
+/* const convertText = (text) => {
   if (text === '') {
   return '';
   }
@@ -100,4 +100,57 @@ const convertText = (text) => {
   return stringStart ? text : reverse(text);
 };
 
-console.log(convertText('mike Vasovski'));//iksvosaV ekim
+console.log(convertText('mike Vasovski'));//iksvosaV ekim */
+
+/* Задание 62
+Реализуйте функцию getNumberExplanation(), которая принимает на вход число и возвращает объяснение этого числа.
+Если для числа нет объяснения, то возвращается null:
+
+getNumberExplanation(8);   // null
+
+// Объяснения есть только для указанных ниже чисел
+getNumberExplanation(666); // 'devil number'
+getNumberExplanation(42);  // 'answer for everything'
+getNumberExplanation(7);   // 'prime number'
+
+Решение: без return, через классическую конструкцию с созданием переменной и break */ 
+
+/* const getNumberExplanation = (number) => {
+  let numberValue;
+  switch (number) {
+    case 666:
+      numberValue = 'devil number';
+      break;
+
+    case 42:
+      numberValue = 'answer for everything';
+      break;
+
+    case 7:
+      numberValue = 'prime number';
+      break;
+    
+    default:
+      numberValue = null;
+  }
+  return numberValue;
+}; */
+
+//Решение 2: через return
+const getNumberExplanation = (number) => {
+  switch (number) {
+    case 666:
+      return 'devil number';
+    
+    case 42:
+      return 'answer for everything';
+   
+    case 7:
+      return 'prime number';
+    
+    default:
+      return null;
+  }
+};
+
+console.log(getNumberExplanation(666)); //devil number
