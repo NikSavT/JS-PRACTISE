@@ -33,11 +33,50 @@ const word = 'Hexlet';
 printReversedWordBySymbol(word);
 // => 't' // => 'e' // => 'l' // => 'x' // => 'e' // => 'H'
 Решение: */
-const printReversedWordBySymbol = (text) => {
+/* const printReversedWordBySymbol = (text) => {
   let i = text.length -1;
   while (i >= 0) {
     console.log(text[i]);
     i = i - 1;
   }
 };
-printReversedWordBySymbol('name'); //e m a n
+printReversedWordBySymbol('name'); //e m a n */
+
+/* Задание 67
+const countChars = (str, char) => {
+  let i = 0;
+  let count = 0;
+  while (i < str.length) {
+    if (str[i] === char) {
+      // Считаем только подходящие символы
+      count = count + 1;
+    }
+    // Счетчик увеличивается в любом случае
+    i = i + 1;
+  }
+
+  return count;
+};
+Функция из теории учитывает регистр букв. То есть A и a с её точки зрения разные символы. 
+Реализуйте вариант этой же функции, так чтобы регистр букв был не важен:
+
+countChars('HexlEt', 'e'); // 2
+countChars('HexlEt', 'E'); // 2
+
+Решение: */
+
+const countChars = (str, char) => {
+  let i = 0;
+  let count = 0;
+  while (i < str.length) {
+    if (str[i].toUpperCase() === char.toUpperCase()) {
+      // Считаем только подходящие символы
+      count = count + 1;
+    }
+    // Счетчик увеличивается в любом случае
+    i = i + 1;
+  }
+  return count;
+};
+
+console.log(countChars('HExlet is a iiGood school On Ithe Internet', 'I'));//5
