@@ -65,7 +65,7 @@ countChars('HexlEt', 'E'); // 2
 
 Решение: */
 
-const countChars = (str, char) => {
+/* const countChars = (str, char) => {
   let i = 0;
   let count = 0;
   while (i < str.length) {
@@ -78,5 +78,53 @@ const countChars = (str, char) => {
   }
   return count;
 };
+console.log(countChars('HExlet is a iiGood school On Ithe Internet', 'I'));//5 */
 
-console.log(countChars('HExlet is a iiGood school On Ithe Internet', 'I'));//5
+
+/* Задание 68
+const reverse = (str) => {
+  let i = 0;
+  // Нейтральный элемент для строк это пустая строка
+  let result = '';
+  while (i < str.length) {
+    // Соединяем в обратном порядке
+    result = `${str[i]}${result}`;// это и делает подстановку слева - сначала ${str[i]} потом ${result}
+    // То же самое через конкатенацию
+    // result = str[i] + result;
+    i = i + 1;
+  }
+
+  return result;
+};
+
+const name1 = 'Bran';
+console.log(reverse(name1)); // 'narB'
+
+
+Реализуйте функцию even(), которая возвращает новую строку, состоящую из чётных символов исходной строки.
+
+Решение: */
+// const even = (text) => {
+//   let i = 0;
+//   let result = '';
+//   while (i < text.length) {
+//     if (i % 2 !== 0) {
+//     result = `${result}${text[i]}`;
+//   }
+//     i = i + 1;
+//   }
+//   return result;
+// };
+// console.log (even('fjfjfjfjfjfj'));
+ // более интересное решение из обсуждений
+ // Нет смысла перебирать все символы, проще перешагивать через 1 элемент начиная с чётного.
+const even = (text) => {
+  let i = 1;
+  let result = '';
+  while(i < text.length) {
+  result += text[i];//Оператор сложения с присваиванием (+=) (аналог result = `${result}${text[i]}`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
+  i += 2;
+  }
+  return result;
+  };
+  console.log (even('fjfjfjfjfjfj'));
