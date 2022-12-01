@@ -118,13 +118,35 @@ console.log(reverse(name1)); // 'narB'
 // console.log (even('fjfjfjfjfjfj'));
  // более интересное решение из обсуждений
  // Нет смысла перебирать все символы, проще перешагивать через 1 элемент начиная с чётного.
-const even = (text) => {
-  let i = 1;
+// const even = (text) => {
+//   let i = 1;
+//   let result = '';
+//   while(i < text.length) {
+//     result += text[i];//Оператор сложения с присваиванием (+=) (аналог result = `${result}${text[i]}`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
+//   i += 2;
+//   }
+//   return result;
+//   };
+//   console.log (even('fjfjfjfjfjfj'));
+
+/* Задание 69
+Реализуйте функцию filterString(), принимающую на вход строку и символ, и возвращающую новую строку, в которой удален переданный символ во всех его позициях. Регистр символов важен.
+
+const str = 'If I look back I am lost';
+filterString(str, 'I'); // 'f  look back  am lost'
+filterString('zz Zorro', 'z'); // ' Zorro'
+
+Решение: */
+
+const filterString = (str, char) => {
+  let i = 0;
   let result = '';
-  while(i < text.length) {
-  result += text[i];//Оператор сложения с присваиванием (+=) (аналог result = `${result}${text[i]}`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
-  i += 2;
+  while (i < str.length) {
+    if (str[i] !== char) {
+    result = `${result}${str[i]}`;
+    }
+    i += 1;
   }
   return result;
-  };
-  console.log (even('fjfjfjfjfjfj'));
+};
+console.log(filterString('ff Ffaria, f Welcome', 'f'));//Faria,  Welcome
