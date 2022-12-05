@@ -93,3 +93,5 @@ const encrypt = (str) => {
   return result;
 };
 console.log(encrypt('move'));
+
+let fef ='0123456';
