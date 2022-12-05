@@ -44,7 +44,7 @@ makeItFunny(text, 3); // 'I NevEr LooK bAck'
 // };
 
 // Самое короткое но пока есть непонятка для меня
-const makeItFunny = (text, stepUpperCase) => {
+/* const makeItFunny = (text, stepUpperCase) => {
   let i = 0;
   let result = '';
   
@@ -59,4 +59,37 @@ const makeItFunny = (text, stepUpperCase) => {
   return result;
   };
 
-console.log(makeItFunny('I never look back', 3));// проверка I NevEr LooK bAck
+console.log(makeItFunny('I never look back', 3));// проверка I NevEr LooK bAck */
+
+// let hasChar = (str, char) => {
+//   let i = 0;
+//   while (i < str.length) {
+//     if (str[i] !== char)
+//     return false;
+//     ++i;
+//   }
+//   return true;
+// };
+// console.log(hasChar('Usd', 'U'));//false
+
+// let hasChar = (str, char) => {
+//   let i = 0;
+//   while (i < str.length) {
+//     if (str[i] === char)
+//     return true;
+//     ++i;
+//   }
+//   return false;
+// };
+// console.log(hasChar('sdlUUUUfj8888sadfsaf', 'U'));
+//Я немного разобрался. В этом условии мы используем return, поэтому если мы напишем таким образом, если наше условие не выполниться, то нам вернетcя false (указали в else) и на этом программа остановиться. А нам нужно, чтобы она проверяла дальше. То есть проблема в том, что return останавливает наш цикл, а нам нужно, чтобы return false был только после проверки ВСЕХ букв. А так получается, что если первая буква не true, то возвращается false и программа останавливается.
+const encrypt = (str) => {
+  let result = '';
+  for (let i = 0; i < str.length; i += 2) {
+    const nextSymbol = str[i + 1] || '';
+    result = `${result}${nextSymbol}${str[i]}`;
+  }
+
+  return result;
+};
+console.log(encrypt('move'));
